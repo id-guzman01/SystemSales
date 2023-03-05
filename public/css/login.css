@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    background: linear-gradient(78deg, #FF0303, #F9DBBB);
+}
+
+.section-login{
+    width: 900px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.section-login .row .col .image{
+    width: 400px;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.section-login .row .col .image img{
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 30px;
+}
+
+
+
+
+
+.section-login .row .col .section-formulario{
+    width: 500px;
+    height: 100%;
+    background: white;
+    margin-left: -40px;
+    border-top-right-radius: 30px;
+}
+
+.head-login{
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.head-login .titulo{
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.head-login .titulo h1{
+    font-size: 43px;
+}
+
+
+.head-login .subtitulo{
+    margin-bottom: -5px;
+}
+
+
+.head-login .line-separator hr{
+    size: 20px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+
+.body-login{
+    width: 85%;
+    margin-left: 7%;
+    margin-bottom: 20px;
+}
+
+.body-login .section-form input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+.body-login .section-button{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.body-login .section-button .btn{
+    width: 40%;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #4E6E81;
+    line-height: 1.15;
+    font-size: 16px;
+}
+
+.body-login .section-button .btn:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #FF0303;
+}
+
+
+
+
+
+
+
+
+
+.section-sociales{
+    width: 85%;
+    margin-left: 7%;
+    margin-bottom: 20px;
+}
+
+.section-sociales .row .o h5{
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.section-sociales .text-sociales{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}
+
+.section-sociales .btn-sociales{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+
+.section-sociales .btn-sociales .row .col .btn-google{
+    margin-left: 30%;
+}
+
+.section-sociales .btn-sociales .row .col .btn-google a{
+    width: 80%;
+    background: white;
+    color: black;
+
+    border-radius: 10px;
+    line-height: 1.15;
+    font-size: 16px;
+    border-color: #4E6E81;
+}
+
+.section-sociales .btn-sociales .row .col .btn-google a:hover{
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #FF0303;
+}
+
+.section-sociales .btn-sociales .row .col .btn-google img{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
+.section-sociales .btn-sociales .row .col .btn-facebook{
+    margin-left: 10%;
+}
+
+.section-sociales .btn-sociales .row .col .btn-facebook a{
+    width: 80%;
+    background: white;
+    color: black;
+
+    border-radius: 10px;
+    line-height: 1.15;
+    font-size: 16px;
+    border-color: #4E6E81;
+}
+
+.section-sociales .btn-sociales .row .col .btn-facebook a:hover{
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #FF0303;
+}
+
+.section-sociales .btn-sociales .row .col .btn-facebook img{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+.footer-login{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+
+.footer-login .line-separator hr{
+    size: 20px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.footer-login .content{
+    margin-top: 20px;
+}
+
+
+
+
+
+.section-forget{
+    margin-left: 20%;
+}
