@@ -72,7 +72,13 @@ body{
     margin-bottom: 20px;
 }
 
-.body-login .section-form input{
+.form-email-input input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.form-email-password input{
     border-top: none;
     border-left: none;
     border-right: none;
@@ -105,6 +111,7 @@ body{
     transition: all .1s ease;
     box-shadow: 0 0 0 0 #fff, 0 0 0 3px #FF0303;
 }
+
 
 
 
@@ -216,4 +223,14 @@ body{
 
 .section-forget{
     margin-left: 20%;
+}
+
+
+
+
+
+
+
+.message-error{
+    color: red;
 }

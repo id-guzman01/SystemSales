@@ -40,14 +40,24 @@
                 
                                 <div class="section-form">
                 
-                                    <div class="mb-3">
+                                    <div class="mb-3 form-email-input">
                                     <label for="" class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="abc@mail.com">
+                                    <input type="email" wire:model="email" class="form-control @error('email') is-invalid @enderror form-control" name="" id="" aria-describedby="emailHelpId" placeholder="abc@mail.com">
+
+                                    @error('email')
+                                    <span class="message-error">{{ $message }}</span>
+                                    @enderror 
+
                                     </div>
                 
-                                    <div class="mb-3">
+                                    <div class="mb-3 form-email-password">
                                     <label for="" class="form-label">Password</label>
-                                    <input type="password" class="form-control" name="" id="" placeholder="****">
+                                    <input type="password" wire:model="password" class="form-control @error('password') is-invalid @enderror form-control" name="" id="" placeholder="****">
+
+                                    @error('password')
+                                    <span class="message-error">{{ $message }}</span>
+                                    @enderror 
+
                                     </div>
 
                                     <div class="row">
@@ -57,7 +67,7 @@
                                             <div class="section-check">
 
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="">
+                                                    <input class="form-check-input" wire:model="remember" type="checkbox" value="" id="">
                                                     <label class="form-check-label" for="">
                                                       Recuérdame
                                                     </label>
@@ -81,7 +91,7 @@
                 
                                 <div class="section-button">
                 
-                                    <input name="" id="" class="btn btn-primary" type="button" value="Ingresar">
+                                    <button type="button" wire:loading.attr="disabled" wire:target='login' wire:click.prevent="login()" class="btn btn-primary disabled:opacity-25">Ingresar</button>
                 
                                 </div>
                 
@@ -112,7 +122,7 @@
                                 </div>
 
                                 <div class="text-sociales">
-                                    <p>También puedes iniciar sesión por medio de las siguientes redes sociales</p>
+                                    <p>También puedes iniciar sesión por medio de las siguientes plataformas</p>
                                 </div>
 
 
