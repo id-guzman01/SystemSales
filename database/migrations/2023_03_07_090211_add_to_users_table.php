@@ -22,6 +22,16 @@ return new class extends Migration
                         ->onDelete('cascade');
             });
 
+            $table->after('email_verified_at',function($table){
+                $table->unsignedBigInteger('estado_id');
+                $table->foreign('estado_id')
+                        ->references('id')
+                        ->on('estados')
+                        ->onUpdate('cascade')
+                        ->onDelete('cascade');
+            });
+
+
             $table->after('password',function($table){
 
                 $table->unsignedBigInteger('gender_id');
@@ -39,9 +49,6 @@ return new class extends Migration
                         ->onUpdate('cascade')
                         ->onDelete('cascade');
             });
-
-
-
 
         });
     }

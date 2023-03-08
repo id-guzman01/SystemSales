@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\RegisterMailable;
 use Illuminate\Support\Facades\Hash;
 
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Auth;
+
 class Registro extends Component
 {
 
@@ -31,7 +34,7 @@ class Registro extends Component
         'segundo_apellido' => 'required',
         'tipo_documento' => 'required',
         'documento' => 'required',
-        'email' => 'required|email',
+        'email' => 'required|email|unique:users',
         'codigo_pais' => 'required',
         'telefono' => 'required',
         'fecha_nacimiento' => 'required',
@@ -59,6 +62,7 @@ class Registro extends Component
         $this->validate();
 
         $role_id = 2;
+        $estado_id = 3;
 
         $state = User::create([
             'document_id' => $this->tipo_documento,
@@ -70,7 +74,8 @@ class Registro extends Component
             'fecha_nacimiento' => $this->fecha_nacimiento,
             'password' => Hash::make($this->password),
             'role_id' => $role_id,
-            'gender_id' => $this->genero
+            'gender_id' => $this->genero,
+            'estado_id' => $estado_id
         ]);
 
         if($state){
@@ -92,20 +97,30 @@ class Registro extends Component
                     'url' => $url
                 ]);
 
+
                 if($image){
 
-                    $nombre = $this->nombres . " " . $this->primer_apellido . " " . $this->segundo_apellido;
+                    /*$nombre = $this->nombres . " " . $this->primer_apellido . " " . $this->segundo_apellido;
                     $correo = new RegisterMailable($nombre,$this->email);
-                    $send = mail::to($this->email)->send($correo);
+                    $send = mail::to($this->email)->send($correo);*/
         
-                    if($send){
-                        session()->flash('message', 'Registro completo');
-                        $this->openModal = true;
+                    //if($send){
+
+                        $credentials = [
+                            'email' => $this->email,
+                            'password' => $this->password
+                        ];
+                
+                        Auth::attempt($credentials);
+
+                        event(new Registered($user));
                         $this->reset('nombres', 'primer_apellido', 'segundo_apellido', 'tipo_documento', 'documento', 'email', 'codigo_pais', 'telefono', 'fecha_nacimiento', 'genero', 'password', 'password_confirmation', 'permission');
-                    }else{
+
+                        return redirect()->to('/email/verify');
+                    /*}else{
                         session()->flash('message', 'Correo no enviado');
                         $this->openModal = true;
-                    }
+                    }*/
 
                 }else{
                     session()->flash('message', 'Registro no creado');

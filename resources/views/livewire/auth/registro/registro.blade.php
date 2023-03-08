@@ -4,38 +4,7 @@
 
         @if (session()->has('message'))
 
-            @if (session('message') == 'Registro completo')
-
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>¡Registro Completado!</strong> Enviamos un email al correo electronico que registraste para que actives tú cuenta.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                
-                <x-modals.info>
-
-                    <x-slot name="titulo">
-                        <h3 class="title-text-modal" style="text-align: center;">Registro Exitoso</h3>
-                    </x-slot>
-
-                    <x-slot name="imagen">
-                        <img src="https://img.icons8.com/color/48/null/ok--v1.png"/>
-                    </x-slot>
-
-                    <x-slot name="contenido">
-                        <p>¡Tú registro se realizo con éxito!</p>
-                    </x-slot>
-
-                    <x-slot name="link">
-                        <p>Para iniciar sesión da click <a href="http://localhost:8000/login">aquí</a></p>
-                    </x-slot>
-
-                    <x-slot name="botonOK">
-                        <button type="button" wire:click="$set('openModal',false)" class="btn btn-primary">OK</button>
-                    </x-slot>
-
-                </x-modals.info>
-
-            @elseif (session('message') == 'Correo no enviado')
+            @if (session('message') == 'Correo no enviado')
 
             <x-modals.info>
 

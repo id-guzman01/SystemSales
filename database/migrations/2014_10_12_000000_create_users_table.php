@@ -26,7 +26,6 @@ return new class extends Migration
             $table->string('password');
             $table->date('fecha_nacimiento');
 
-            $table->rememberToken();
             $table->timestamps();
         });
     }

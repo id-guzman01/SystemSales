@@ -193,7 +193,7 @@
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                 <tr>
                     <td bgcolor="#F9DBBB" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <br>
-                        <p style="margin: 0;">Copyright © Todos los derechos reservados</p>
+                        <p style="margin: 0;">Copyright © Todos los derechos reservados - 2023</p>
                     </td>
                 </tr>
             </table>
