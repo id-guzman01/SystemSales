@@ -86,11 +86,20 @@ body{
 
 
 
+.sociales{
+    width: 50%;
+    margin-left: 160px;
+    margin-top: 10px;
+}
 
 .sociales img{
     width: 30px;
     height: 30px;
 }
+
+
+
+
 
 
 .footer{

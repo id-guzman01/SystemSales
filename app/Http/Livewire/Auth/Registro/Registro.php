@@ -61,7 +61,7 @@ class Registro extends Component
 
         $this->validate();
 
-        $role_id = 2;
+        $url = '/storage/profile/user-profile.png';
         $estado_id = 3;
 
         $state = User::create([
@@ -73,7 +73,7 @@ class Registro extends Component
             'email' => $this->email,
             'fecha_nacimiento' => $this->fecha_nacimiento,
             'password' => Hash::make($this->password),
-            'role_id' => $role_id,
+            'url' => $url,
             'gender_id' => $this->genero,
             'estado_id' => $estado_id
         ]);
@@ -90,21 +90,9 @@ class Registro extends Component
 
             if($register){
 
-                $url = '/storage/profile/user-profile.png';
-
-                $image = Profile::create([
-                    'user_id' => $user->id,
-                    'url' => $url
-                ]);
-
-
-                if($image){
-
                     /*$nombre = $this->nombres . " " . $this->primer_apellido . " " . $this->segundo_apellido;
                     $correo = new RegisterMailable($nombre,$this->email);
                     $send = mail::to($this->email)->send($correo);*/
-        
-                    //if($send){
 
                         $credentials = [
                             'email' => $this->email,
@@ -117,15 +105,6 @@ class Registro extends Component
                         $this->reset('nombres', 'primer_apellido', 'segundo_apellido', 'tipo_documento', 'documento', 'email', 'codigo_pais', 'telefono', 'fecha_nacimiento', 'genero', 'password', 'password_confirmation', 'permission');
 
                         return redirect()->to('/email/verify');
-                    /*}else{
-                        session()->flash('message', 'Correo no enviado');
-                        $this->openModal = true;
-                    }*/
-
-                }else{
-                    session()->flash('message', 'Registro no creado');
-                    $this->openModal = true;
-                }
 
             }else{
                 session()->flash('message', 'Registro no creado');

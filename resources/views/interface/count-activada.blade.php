@@ -74,19 +74,19 @@
                     <div class="row">
 
                         <div class="col">
-                            <a href=""> <img src="https://img.icons8.com/color/48/null/facebook.png"/> Facebook</a>
+                            <a href=""> <img src="https://img.icons8.com/color/48/null/facebook.png"/></a>
                         </div>
 
                         <div class="col">
-                            <a href=""> <img src="https://img.icons8.com/color/48/null/twitter-circled--v1.png"/> Twitter</a>
+                            <a href=""> <img src="https://img.icons8.com/color/48/null/twitter-circled--v1.png"/></a>
                         </div>
 
                         <div class="col">
-                            <a href=""> <img src="https://img.icons8.com/fluency/48/null/instagram-new.png"/> Instagram</a>
+                            <a href=""> <img src="https://img.icons8.com/fluency/48/null/instagram-new.png"/></a>
                         </div>
 
                         <div class="col">
-                            <a href=""> <img src="https://img.icons8.com/fluency/48/null/youtube-play.png"/> Youtube</a>
+                            <a href=""> <img src="https://img.icons8.com/fluency/48/null/youtube-play.png"/></a>
                         </div>
 
                     </div>
