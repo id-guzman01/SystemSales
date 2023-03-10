@@ -25,6 +25,7 @@ return new class extends Migration
 
             $table->string('password');
             $table->date('fecha_nacimiento');
+            $table->string('url',150);
 
             $table->timestamps();
         });

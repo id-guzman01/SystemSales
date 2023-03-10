@@ -41,13 +41,6 @@ return new class extends Migration
                         ->onUpdate('cascade')
                         ->onDelete('cascade');
 
-
-                $table->unsignedBigInteger('role_id');
-                $table->foreign('role_id')
-                        ->references('id')
-                        ->on('roles')
-                        ->onUpdate('cascade')
-                        ->onDelete('cascade');
             });
 
         });
