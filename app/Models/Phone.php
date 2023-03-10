@@ -15,4 +15,12 @@ class Phone extends Model
         'numero'
     ];
 
+    public function users(){
+        return $this->belongsTo(User::class,'user_id','id');
+    }
+
+    public function codes(){
+        return $this->belongsTo(Code::class,'code_id','id');
+    }
+
 }

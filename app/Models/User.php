@@ -11,10 +11,11 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -76,6 +77,26 @@ class User extends Authenticatable implements MustVerifyEmail
             get: fn($value) => ucwords($value),
             set: fn($value) => strtolower($value)
         );
+    }
+
+
+
+    //Relaciones
+
+    public function document(){
+        return $this->belongsTo(Document::class,'document_id','id');
+    }
+
+    public function estado(){
+        return $this->belongsTo(Estado::class,'estado_id','id');
+    }
+
+    public function gender(){
+        return $this->belongsTo(Gender::class,'gender_id','id');
+    }
+
+    public function phones(){
+        return $this->hasMany(Phone::class,'user_id','id');
     }
 
 

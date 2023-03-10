@@ -76,7 +76,7 @@ class Registro extends Component
             'url' => $url,
             'gender_id' => $this->genero,
             'estado_id' => $estado_id
-        ]);
+        ])->assignRole('Cliente');
 
         if($state){
 
