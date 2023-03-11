@@ -59,7 +59,21 @@ Route::post('/email/verification-notification', function (Request $request) {
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 
+//Funciones del administrador
+Route::middleware('auth')->prefix('admin')->group(function(){
 
+    Route::get('/dashboard',function(){
+        return view('interface.dashboard');
+    })->name('dashboard');
+
+
+});
+
+
+//Funciones del cliente
+Route::middleware('auth')->prefix('client')->group(function(){
+
+});
 
 
 

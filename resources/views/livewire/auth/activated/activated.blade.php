@@ -31,7 +31,7 @@
 
         Swal.fire({
             icon: 'error',
-            text: 'Actualmente no es posible procesa la solicitud, intente nuevamente',
+            text: 'Actualmente no es posible procesar la solicitud, intente nuevamente',
         })
 
     </script>

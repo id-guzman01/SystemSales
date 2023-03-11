@@ -1,4 +1,50 @@
 <div>
+
+
+    @if (session()->has('message'))
+
+        @if (session('message')=='email erroneo')
+
+            <script>
+
+                Swal.fire({
+                    icon: 'error',
+                    text: 'El email que ingresaste es erroneo o no se encuentra registrada, intente nuevamente',
+                })
+
+            </script>
+
+        @elseif (session('message') == 'password erronea')    
+
+            <script>
+
+                Swal.fire({
+                    icon: 'error',
+                    text: 'La contraseña que ingresaste es erronea, intente nuevamente',
+                })
+
+            </script>
+
+
+        @elseif (session('message') == 'proceso fallido')
+
+            <script>
+
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Actualmente no es posible procesar la solicitud, intente nuevamente',
+                })
+
+            </script>
+
+        @endif
+
+    
+    @endif
+
+
+
+
     
     <div class="section-login">
 
@@ -72,7 +118,7 @@
                                                       Recuérdame
                                                     </label>
                                                   </div>
-
+                                                  
                                             </div>
 
                                         </div>

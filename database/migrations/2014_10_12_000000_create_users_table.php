@@ -27,6 +27,7 @@ return new class extends Migration
             $table->date('fecha_nacimiento');
             $table->string('url',150);
 
+            $table->rememberToken();
             $table->timestamps();
         });
     }

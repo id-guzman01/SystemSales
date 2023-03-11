@@ -26,15 +26,35 @@ class Login extends Component
 
         $this->validate();
 
-        $credentials = [
-            'email' => $this->email,
-            'password' => $this->password
-        ];
-
-        if(Auth::attempt($credentials)){
-            
+        if($this->remember==1){
+            $remember  = true;
         }else{
-            
+            $remember  = false; 
+        }
+
+        $user = User::where('email','=',$this->email)->first();
+   
+        if( isset($user->id) ){
+
+            if(Hash::check($this->password,$user->password)){
+
+                $credentials = [
+                    'email' => $this->email,
+                    'password' => $this->password
+                ];
+        
+                if(Auth::attempt($credentials, $remember)){
+                    return redirect()->to('admin/dashboard');
+                }else{
+                    session()->flash('message', 'proceso fallido');
+                }
+
+            }else{
+                session()->flash('message', 'password erronea');
+            }
+
+        }else{
+            session()->flash('message', 'email erroneo');
         }
 
 
