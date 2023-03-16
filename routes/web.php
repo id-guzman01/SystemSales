@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
  
 use App\Http\Controllers\LogoutController;
-
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +24,16 @@ Route::get('/', function () {
 });
 
 Route::get('/login',function(){
-    return view('interface.login');
+
+    if (Auth::check()) {
+
+            return redirect('admin/dashboard');
+
+
+    }else{
+        return view('interface.login');
+    }
+
 })->name('login');
 
 Route::get('/registro',function(){
@@ -66,7 +75,18 @@ Route::middleware('auth')->prefix('admin')->group(function(){
         return view('interface.dashboard');
     })->name('dashboard');
 
+    Route::get('/users',function(){
+        return view('interface.users.users');
+    })->name('users');
 
+    Route::get('/create_users',function(){
+        return view('interface.users.create_users');
+    })->name('create_users');
+
+});
+
+Route::get('/name-user',function(){
+    return auth()->user()->nombres . " " . auth()->user()->primer_apellido . " " . auth()->user()->segundo_apellido;
 });
 
 

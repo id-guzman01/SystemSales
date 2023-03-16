@@ -6,7 +6,7 @@
 @if ($level === 'error')
 # @lang('Whoops!')
 @else
-# @lang('Hello!')
+# @lang('¡Hola!')
 @endif
 @endif
 
@@ -21,7 +21,7 @@
 <?php
     $color = match ($level) {
         'success', 'error' => $level,
-        default => 'primary',
+        default => 'danger',
     };
 ?>
 <x-mail::button :url="$actionUrl" :color="$color">
@@ -39,16 +39,16 @@
 @if (! empty($salutation))
 {{ $salutation }}
 @else
-@lang('Cordialmente'),<br>
-Team System Sales
+@lang('Regards'),<br>
+System Sales Team
 @endif
 
 {{-- Subcopy --}}
 @isset($actionText)
 <x-slot:subcopy>
 @lang(
-    "Si tiene problemas para hacer clic en el \":actionText\" botón, copia y pega la URL \n".
-    'en tu navegador web:',
+    "Si tiene problemas para hacer clic en el \":actionText\" botón, copie y pegue la URL a continuación\n".
+    'en su navegador web:',
     [
         'actionText' => $actionText,
     ]

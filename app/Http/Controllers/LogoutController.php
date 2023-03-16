@@ -12,12 +12,9 @@ class LogoutController extends Controller
     
     public function logout(){
 
-        $state = Auth::logout();
-
-        if($state){
-            return view('login');
-        }
-
+        Auth::logout();
+        return redirect()->to('login');
+        
     }
 
 }

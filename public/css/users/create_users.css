@@ -1,0 +1,84 @@
+.content-principal{
+    width: 100%;
+}
+
+.content-formulario{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5px;
+}
+
+
+
+
+.content-formulario .row .col img{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+
+
+
+.section-form-space{
+    margin-top: -10px;
+}
+
+
+
+
+.section-btn-back button{
+    background: #FF0303;
+    margin-left: 10%;
+    width: 10%;
+    color: white;
+}
+
+.section-btn-back button:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #FF0303;
+    color: white;
+}
+
+
+
+.section-btn-register{
+    text-align: center;
+}
+
+.section-btn-register button{
+    width: 40%;
+    height: 40px;
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #4E6E81;
+    line-height: 1.15;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.section-btn-register button:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #FF0303;
+    color: white;
+}
+
+
+.message-error{
+    color: red;
+}
+
+.form-control{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+

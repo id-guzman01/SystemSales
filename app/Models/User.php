@@ -11,7 +11,9 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
+
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -31,7 +33,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'email',
         'fecha_nacimiento',
         'password',
-        'role_id',
         'gender_id',
         'estado_id',
         'url'
@@ -97,6 +98,22 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function phones(){
         return $this->hasMany(Phone::class,'user_id','id');
+    }
+
+
+    
+    //Configuración adminlte
+    public function adminlte_profile_url(){
+        return 'profile/username';
+    }
+
+    public function adminlte_image(){
+        return Auth::user()->url;
+    }
+
+    public function adminlte_desc(){
+
+        return "Mienbro desde " . Auth::user()->created_at->day . " de " . Auth::user()->created_at->monthName . " del " . Auth::user()->created_at->year;
     }
 
 

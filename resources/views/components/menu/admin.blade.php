@@ -1,5 +1,5 @@
 <div>
 
-
+    {{$contenido}}
 
 </div>

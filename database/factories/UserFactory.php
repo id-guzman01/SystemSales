@@ -5,11 +5,18 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
+
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
 class UserFactory extends Factory
 {
+
+    protected $model = User::class;
+
     /**
      * Define the model's default state.
      *
@@ -18,10 +25,18 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
+            'document_id' => rand(1,2),
+            'documento' => rand(1000000000,9999999999),
+            'nombres' => fake()->name(),
+            'primer_apellido' => fake()->firstName(),
+            'segundo_apellido' => fake()->lastName(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'estado_id' => '1',
+            'password' => Hash::make('123456789'),
+            'gender_id' => rand(1,2),
+            'fecha_nacimiento' => fake()->dateTimeBetween('-18 years')->format('Y-m-d'),
+            'url' => '/storage/profile/user-profile.png',
             'remember_token' => Str::random(10),
         ];
     }

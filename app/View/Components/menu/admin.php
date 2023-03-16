@@ -9,7 +9,6 @@ use Illuminate\Contracts\View\View;
 class admin extends Component
 {
 
-
     /**
      * Create a new component instance.
      */

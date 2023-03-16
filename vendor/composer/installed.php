@@ -3,13 +3,22 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '44aaa6bc6a034a11827086d4c5de8e778d517671',
+        'reference' => 'ec59cdbe7a8533e5aa5bd82d8ce07f7dd8923d42',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'almasaeed2010/adminlte' => array(
+            'pretty_version' => 'v3.2.0',
+            'version' => '3.2.0.0',
+            'reference' => 'bd4d9c72931f1dd28601b6bfb387554a381ad540',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../almasaeed2010/adminlte',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.10.2',
             'version' => '0.10.2.0',
@@ -355,6 +364,15 @@
                 0 => 'v10.2.0',
             ),
         ),
+        'jeroennoten/laravel-adminlte' => array(
+            'pretty_version' => 'v3.8.6',
+            'version' => '3.8.6.0',
+            'reference' => '6cb6153e875b3bbf085df0edfed25ceb35cbe2d6',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jeroennoten/laravel-adminlte',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'josiasmontag/laravel-recaptchav3' => array(
             'pretty_version' => '1.0.2',
             'version' => '1.0.2.0',
@@ -382,7 +400,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '44aaa6bc6a034a11827086d4c5de8e778d517671',
+            'reference' => 'ec59cdbe7a8533e5aa5bd82d8ce07f7dd8923d42',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

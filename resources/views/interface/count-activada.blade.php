@@ -28,7 +28,7 @@
                                 {{auth()->user()->nombres}} {{auth()->user()->primer_apellido}} {{auth()->user()->segundo_apellido}}
                         </button>
                         <div class="dropdown-menu dropdown-menu-start" aria-labelledby="triggerId">
-                            <a class="dropdown-item" href="{{ url('login') }}">Cerrar Sesión</a>
+                            <a class="dropdown-item" href="{{ url('logout') }}">Cerrar Sesión</a>
                         </div>
                     </div>
 
