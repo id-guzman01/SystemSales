@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->string('nombre',40);
             $table->string('nit',20);
-            $table->string('direccion',70);
+            $table->string('direccion',200);
             $table->string('email',50);
 
             $table->timestamps();

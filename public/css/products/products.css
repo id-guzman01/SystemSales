@@ -1,0 +1,882 @@
+.section-notice-offline{
+  width: 100%;
+  text-align: center;
+}
+
+
+.section-btn-add-product{
+  width: 30%;
+  margin-left: -43%;
+  margin-top: 9%;
+}
+
+.section-btn-add-product button{
+  height: 50%;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  
+  border: 0;
+  color: white;
+  background: #4E6E81;
+  line-height: 1.15;
+  font-size: 16px;
+}
+
+.section-btn-add-product button:hover {
+  transition: all .1s ease;
+  background: #FF0303;
+  color: white;
+}
+
+
+
+
+.section-registered-page{
+  margin-top: 10%;
+}
+
+.section-registered-page .form-control{
+  width: 35%;
+  margin-left: 22.5%;
+  margin-top: -37.5px;
+}
+
+.form-control{
+  height: 35%;
+  font-size: 15px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+
+
+.section-search-table{
+  width: 100%;
+}
+
+.section-search-table .section-text-search{
+  width: 80%;
+  margin-top: 10px;
+  margin-left: -20px;
+}
+
+.section-search-table .section-text-search input{
+  width: 90%;
+  margin-left: 22.5%;
+  margin-top: -35px;
+}
+
+.section-search-table .section-text-search select{
+  width: 90%;
+  margin-left: 30%;
+  margin-top: -35px;
+}
+
+.section-text-search-subcategorie select{
+  width: 58%;
+  margin-left: 32.5%;
+  margin-top: -35px;
+}
+
+
+/*Estilos de tabla*/
+ 
+.table-wrapper{
+    margin: 10px 70px 5px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+  }
+  
+  .fl-table {
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+  }
+  
+  .fl-table td, .fl-table th {
+    
+    padding: 8px;
+  }
+  
+  .fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+  }
+  
+  .fl-table thead th {
+    color: #ffffff;
+    background: #FF0303;
+  }
+  
+  
+  .fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #4E6E81;
+  }
+  
+  .fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+  
+    }
+  
+  }
+
+
+
+/*Fin de los estilos de las tabla*/
+
+.icon-size{
+    width: 12px;
+    height: 12px;
+    color: white;
+}
+
+.icon-eye{
+    margin-left: -6px;
+}
+
+.icon-edit{
+    margin-left: -4px;
+}
+
+
+.td-id-product p{
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.td-product p{
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.td_product_sub_categorie p{
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.td_prodcut_existencias p{
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+
+
+.section-state-product-success{
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  background: black;
+  border-radius: 10px;
+  margin-left: 20%;
+}
+
+.section-state-product-success p{
+  color: green;
+  font-size: 18px;
+}
+
+
+
+.section-state-product-warning{
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  background: black;
+  border-radius: 10px;
+  margin-left: 20%;
+}
+
+.section-state-product-warning p{
+  color: orange;
+  font-size: 18px;
+}
+
+
+.section-state-product-red{
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  background: black;
+  border-radius: 10px;
+  margin-left: 20%;
+}
+
+.section-state-product-red p{
+  color: red;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+.footer-table{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  
+  .footer-table .content-footer{
+  
+    height: 70%;
+    margin-left: 75%;
+  
+  }
+
+
+
+
+
+
+
+
+  .empty{
+    width: 100%;
+    margin-top: 120px;
+    text-align: center;
+  }
+  
+  .load{
+    width: 100%;
+    margin-top: 120px;
+    text-align: center;
+  }
+  
+  
+  
+  #preloader6{
+  position:relative;
+  width: 42px;
+  height: 42px;
+  margin-left: 50%;
+  margin-bottom: 10px;
+  animation: preloader_6 5s infinite linear;
+  }
+  #preloader6 span{
+  width:20px;
+  height:20px;
+  position:absolute;
+  background:red;
+  display:block;
+  animation: preloader_6_span 1s infinite linear;
+  }
+  #preloader6 span:nth-child(1){
+  background:#2E3840;
+  }
+  #preloader6 span:nth-child(2){
+  left:22px;
+  background:#FF0303;
+  animation-delay: .2s;
+  }
+  #preloader6 span:nth-child(3){
+  top:22px;
+  background:#F9DBBB;
+  animation-delay: .4s;
+  }
+  #preloader6 span:nth-child(4){
+  top:22px;
+  left:22px;
+  background:#4E6E81;
+  animation-delay: .6s;
+  }
+  @keyframes preloader_6_span {
+   0% { transform:scale(1); }
+   50% { transform:scale(0.5); }
+   100% { transform:scale(1); }
+  }
+
+
+
+
+
+
+/* Modal para visualizar el producto */
+
+.window-notice {
+  background: rgba(33, 41, 52, .85);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  color: black;
+}
+
+.window-notice .content {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 850px;
+  min-width: 320px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+  font-size: 1.3rem;
+
+  height: 650px;
+  overflow-y: scroll;
+}
+
+
+
+.content-section-btn-close{
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.content-section-btn-close button{
+  color: black;
+
+}
+
+.content-section-btn-close button:hover {
+  transition: all .1s ease;
+  background: #FF0303;
+}
+
+
+
+.section-imagenes{
+  width: 90%; 
+  height: 400px; 
+  margin-left: 5%; 
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.section-imagenes .carousel img{
+  width: 100%;
+  height: 400px;
+}
+
+
+.section-info-product-description{
+  width: 90%;
+  margin-left: 5%;
+}
+
+
+
+.section-info-product-description p{
+  font-size: 17px;
+}
+
+.section-cost{
+  width: 30%;
+  margin-top: -10px;
+}
+
+.section-cost .section-text-precio{
+  margin-left: -50%;
+}
+
+
+
+.section-state-stock-product-info{
+  width: 80%;
+}
+
+.section-state-stock-product-info .section-state-product-info-success i{
+  color: green;
+}
+
+.section-state-stock-product-info .section-state-product-info-danger i{
+  color: red;
+}
+
+.section-state-stock-product-info .section-state-product-info-warning i{
+  color: orange;
+}
+
+
+
+.stock-text-section-product-info{
+  margin-left: -80px;
+}
+
+.section-text-categorie-product-info{
+  margin-left: -190px;
+}
+
+
+
+
+.section-subcategorie-product-info{
+  margin-left: -85px;
+}
+
+.section-subcategorie-product-info-text{
+  margin-left: -200px;
+}
+
+
+
+.section-discount-product-info{
+  margin-bottom: 5px;
+}
+
+.section-discount-product-info-text{
+  margin-left: -560px;
+}
+
+
+
+.section-description-product{
+  margin-bottom: 5px;
+}
+
+.subsection-description-product-info-text{
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+
+
+
+
+
+
+.section-specification-product{
+  margin-bottom: 10px;
+}
+
+.subsection-specification-product-info-text{
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+
+
+
+/* Modal para visualizar el historial de ingresos del producto al stock*/
+
+.window-notice-history {
+  background: rgba(33, 41, 52, .85);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  color: black;
+}
+
+.window-notice-history  .content-history {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 600px;
+  min-width: 320px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+  font-size: 1.3rem;
+
+  height: 650px;
+  overflow-y: scroll;
+}
+
+
+.section-btn-close-modal-history{
+border: none;
+background: transparent;
+width: 100%;
+text-align: right;
+margin-bottom: 10px;
+}
+
+.section-btn-close-modal-history button{
+color: black;
+
+}
+
+.section-btn-close-modal-history button:hover {
+transition: all .1s ease;
+background: #FF0303;
+}
+
+
+.section-title-modal-history{
+  width: 100%;
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.section-line-separator-modal-history{
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+.section-name-product-modal-history{
+  width: 100%;
+}
+
+.section-name-product-modal-history p{
+  font-size: 17px;
+}
+
+.section-name-product-modal-history-text{
+  margin-left: -270px;
+}
+
+
+.message-error{
+  color: red;
+  font-size: 14px;
+}
+
+
+/* Modal para visualizar el historial de salidas de productos del stock*/
+
+.window-notice-salidas {
+  background: rgba(33, 41, 52, .85);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  color: black;
+}
+
+.window-notice-salidas  .content-salidas {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 600px;
+  min-width: 320px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+  font-size: 1.3rem;
+
+  height: 650px;
+  overflow-y: scroll;
+}
+
+
+
+
+
+/* Modal para registrar entradas de productos al stock*/
+
+.window-notice-stock {
+  background: rgba(33, 41, 52, .85);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  color: black;
+}
+
+.window-notice-stock  .content-stock {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 500px;
+  min-width: 320px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 150px;
+  font-size: 1.3rem;
+
+  
+}
+
+
+
+.section-input-info-update-stock{
+  margin-top: 10px;
+}
+
+.section-label-info-update-stock{
+  margin-top: 10px;
+}
+
+.section-text-info-update-stock{
+  margin-left: -50%;
+}
+
+.section-text-info-update-stock p{
+  margin-top: -3px;
+}
+
+
+
+.section-content-update-stock-manual{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.section-content-update-stock-manual input{
+  border-top: none;
+  border-left: none;
+  border-right:  none;
+}
+
+
+
+.section-content-btn-update-stock-manual{
+  width: 100%;
+  text-align: center;
+  
+}
+
+.section-content-btn-update-stock-manual button{
+  border-bottom: 30px;
+  width: 40%;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px 24px;
+  border: 0;
+  color: #fff;
+  background: #4E6E81;
+  line-height: 1.15;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.section-content-btn-update-stock-manual button:hover {
+  transition: all .1s ease;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #FF0303;
+  color: white;
+}
+
+
+
+
+
+
+/* Modal para editar el producto*/
+
+.window-notice-edit {
+  background: rgba(33, 41, 52, .85);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  color: black;
+}
+
+.window-notice-edit  .content-edit {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 600px;
+  min-width: 320px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+  font-size: 1.3rem;
+
+  height: 650px;
+  overflow-y: scroll;
+}
+
+
+
+.content-principal-edit-product{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.content-principal-edit-product .form-control{
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  height: 35px;
+  font-size: 15px;
+}
+
+.content-principal-edit-product .form-label{
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section-add-photo-edit-product input{
+  width: 18px;
+  height: 18px;
+  margin-top: 8px;
+}
+
+.section-add-photo-edit-product label{
+  font-size: 17px;
+  margin-left: -10px;
+}
+
+
+.section-add-photos-new-edit-product{
+  width: 90%;
+  margin-left: 10%;
+}
+
+.form-group>input {
+  display: none;
+}
+
+
+
+
+
+
+
+
+.section-btn-edit-product{
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
+
+.section-btn-edit-product button{
+  width: 40%;
+  height: 40px;
+
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px 24px;
+  border: 0;
+  color: #fff;
+  background: #4E6E81;
+  line-height: 1.15;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.section-btn-edit-product button:hover {
+  transition: all .1s ease;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #FF0303;
+  color: white;
+}

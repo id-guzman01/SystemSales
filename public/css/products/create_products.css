@@ -1,0 +1,244 @@
+.content-principal{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    border-color: black;
+
+    border-color: gray;
+    border-width: 1px;
+    border-style: dotted;
+    border-radius: 10px;
+
+    height: 550px;
+    overflow-y: scroll;
+}
+
+.section-btn-back{
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+
+.section-btn-back button{
+    width: 20%;
+    background: #4E6E81;
+    color: white;
+}
+
+.section-btn-back button:hover {
+    transition: all .1s ease;
+    background: #FF0303;
+    color: white;
+}
+
+
+
+
+
+.section-primer-title{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
+}
+
+.section-line-separator{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.section-nombre{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10px;
+}
+
+.section-description{
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+.ck-editor__editable[role="textbox"] {
+    /* editing area */
+    min-height: 150px;
+}
+.ck-content .image {
+    /* block images */
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+
+
+.section-categories{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.section-discount{
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+}
+
+.section-discount-add{
+    width: 35%;
+    margin-left: 8%;
+}
+
+
+
+.section-state{
+    width: 25%;
+    margin-left: 15%;
+}
+
+.section-precio{
+    width: 25%;
+    margin-left: 15%;
+}
+
+
+
+.section-specification{
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 35px;
+    margin-top: 25px;
+}
+
+
+
+
+
+
+.section-add-specification{
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 15px;
+}
+
+.section-title-specification-add{
+    width: 60%;
+}
+
+.section-description-specification-add{
+    margin-left: -45%;
+    width: 135%;
+}
+
+
+
+
+
+
+.section-photos{
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 15px;
+}
+
+.section-photo-preview{
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 15px;
+}
+
+
+.section-second-title{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 40px;
+}
+
+
+.section-nombre-proveedor{
+    width: 25%;
+    margin-left: 15%;
+}
+
+.section-stock{
+    width: 25%;
+    margin-left: 15%;
+    margin-bottom: 50px;
+}
+
+
+
+.section-btn-registro{
+    width: 100%;
+    text-align: center;
+}
+
+.section-btn-registro button{
+    width: 25%;
+    margin-bottom: 10px;
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 10px;
+    
+    border: 0;
+    color: white;
+    background: #4E6E81;
+    line-height: 1.15;
+    font-size: 16px;
+}
+
+.section-btn-registro button:hover {
+    transition: all .1s ease;
+    background: #FF0303;
+    color: white;
+}
+
+
+
+.section-dates-product-inicial .form-control{
+    font-size: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.section-dates-product-inicial .form-style{
+    height: 35px;
+}
+
+
+.content-discount{
+    margin-bottom: 15px;
+}
+
+.section-btn-add-form{
+    margin-left: -40%;
+
+}
+
+.section-btn-add-form button{
+    margin-top: -6px;
+    background: #4E6E81;
+    color: white;
+}
+
+.section-btn-add-form button:hover {
+    transition: all .1s ease;
+    background: #FF0303;
+    color: white;
+}
+
+
+.message-error{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+

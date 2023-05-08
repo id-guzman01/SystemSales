@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    background: linear-gradient(92deg, #FF0303, #F9DBBB);
+}
+
+.content-principal{
+    width: 700px;
+    background: white;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+
+.content-principal .title-principal{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content-principal .title-principal p{
+    font-size: 22.5px;
+}
+
+
+
+
+.content-principal .section-logo-content{
+    width: 100%;
+}
+
+.content-principal .section-logo-content .section-logo{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.content-principal .section-logo-content .section-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.section-text{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 30px;
+}
+
+.section-text p{
+    font-size: 17px;
+}
+
+.section-text .section-text-descripcion p{
+    margin-bottom: -5px;
+}
+
+.section-text .section-text-descripcion{
+    margin-bottom: 25px;
+}
+
+
+
+.section-text .section-text-description-agradecimiento{
+    margin-top: 10px;
+}
+
+.section-text .section-text-description-agradecimientos p{
+    margin-bottom: -10px;
+}
+
+
+.section-text .section-text-description-agradecimientos{
+    margin-bottom: 20px;
+}
+
+
+.section-text .section-text-footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+

@@ -296,7 +296,7 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Buscar',
         ],
         [
             'text' => 'Dashboard',
@@ -307,6 +307,12 @@ return [
             'text' => 'Usuarios',
             'url'  => 'admin/users',
             'icon' => 'fas fa-fw fa-users'
+        ],
+
+        [
+            'text' => 'Productos',
+            'url'  => 'admin/productos',
+            'icon' => 'fas fa-fw fa-laptop'
         ],
 
         ['header' => 'account_settings'],

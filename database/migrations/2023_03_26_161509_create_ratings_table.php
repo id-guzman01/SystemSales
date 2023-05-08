@@ -11,17 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('entrances', function (Blueprint $table) {
+        Schema::create('ratings', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('stock_id');
-            $table->foreign('stock_id')
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('product_id')
                     ->references('id')
-                    ->on('stock')
+                    ->on('products')
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
 
-            $table->string('cantidad',20);
+            $table->integer('puntaje');
+            $table->text('comentario');
 
             $table->timestamps();
         });
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('entrances');
+        Schema::dropIfExists('ratings');
     }
 };

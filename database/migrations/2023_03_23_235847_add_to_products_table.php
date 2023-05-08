@@ -13,16 +13,9 @@ return new class extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             
-            $table->after('discount_id',function($table){
+            $table->after('descripcion',function($table){
 
-                $table->unsignedBigInteger('state_id')->nullable();
-                $table->foreign('state_id')
-                        ->references('id')
-                        ->on('states')
-                        ->onDelete('cascade')
-                        ->onUpdate('cascade');
-
-                $table->bigInteger('precio');
+                $table->text('especificaciones');
 
             });
 

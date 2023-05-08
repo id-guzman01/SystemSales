@@ -1,6 +1,166 @@
 <div wire:init="lodadData">
 
-    <x-componentes.table>
+    @if (session()->has('message'))
+        
+        @if (session('message') == 'Usuario actualizado')
+            
+            <x-alert.alert_x alerta="success">
+
+                <x-slot:titulo>
+                    Proceso Completado!
+                </x-slot>
+        
+                <x-slot:contenido>
+                    Los datos del usuario se actualizaron con exito.
+                </x-slot>
+        
+            </x-alert.alert_x>
+
+        @endif
+
+        
+        @if (session('message') == 'Usuario no actualizado')
+            
+            <x-alert.alert_x alerta="danger">
+
+                <x-slot:titulo>
+                    Proceso Fallido!
+                </x-slot>
+        
+                <x-slot:contenido>
+                    Actualmente no es posible actualizar los datos del usuario, intene más tarde.
+                </x-slot>
+        
+            </x-alert.alert_x>
+
+        @endif
+
+
+
+    @endif
+
+
+
+
+    @if ($viewUsers)
+
+                <x-modals.user_info>
+
+                    <x-slot:botton_close>
+                        <button type="button" class="btn" wire:click="$set('viewUsers',false)"> <i class="fas fa-times"></i> </button>
+                    </x-slot>
+
+                    <x-slot:url>
+                        <img src="{{ asset($url) }}" alt="">
+                    </x-slot>
+
+                    <x-slot:nombre>
+                        {{$nombres}}
+                    </x-slot>
+
+                    <x-slot:email>
+                        {{$email}}
+                    </x-slot>
+
+                    <x-slot:telefono>
+                        
+                            <h6> {{$telefono}}</h6>
+
+                    </x-slot>
+
+                    <x-slot:role>
+
+                            <h5>{{$role}}</h5>
+
+                    </x-slot>
+
+                    <x-slot:status>
+
+                        @if ($estado_id == 1)
+                            <p style="color: green;"> <i class="fas fa-circle"></i> {{$estado}}</p>
+                        @endif
+
+                        @if ($estado_id == 2)
+                            <p style="color: red;"> <i class="fas fa-circle"></i> {{$estado}}</p>
+                        @endif
+
+                        @if ($estado_id == 3)
+                            <p style="color: orange;"> <i class="fas fa-circle"></i> {{$estado}}</p>
+                        @endif
+
+                        
+                    </x-slot>
+
+
+                </x-modals.user_info>
+
+
+        @endif
+
+    
+        @if ($editUsers)
+            
+            <x-modals.user_edit>
+
+                <x-slot:botton_close>
+                    <button type="button" class="btn" wire:click="$set('editUsers',false)"> <i class="fas fa-times"></i> </button>
+                </x-slot>
+
+                <x-slot:estado_cuenta>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Estado</label>
+                        <select class="form-control @error('estado_id') is-invalid @enderror form-contro" wire:model="estado_id" name="" id="">
+                            <option>Seleccione</option>
+
+                            @foreach ($states as $state)
+                            <option value="{{$state->id}}">{{$state->nombre}}</option>
+                            @endforeach
+
+
+                        </select>
+
+                        @error('estado_id')
+                            <span class="message-error">{{ $message }}</span>
+                        @enderror 
+
+                    </div>
+                </x-slot>
+
+                <x-slot:role_acount>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Rol</label>
+                        <select class="form-control @error('role_id') is-invalid @enderror form-contro" wire:model="role" name="" id="">
+                            <option>Seleccione</option>
+
+                            @foreach ($roles as $role)
+                                <option value="{{$role->name}}">{{$role->name}}</option>
+                            @endforeach
+                            
+
+                        </select>
+
+
+                        @error('role_id')
+                            <span class="message-error">{{ $message }}</span>
+                        @enderror 
+
+                    </div>
+                </x-slot>
+
+                <x-slot:button_update>
+                    <button type="button" class="btn btn-primary disabled:opacity-25" wire:loading.attr='disabled' wire:target='editUsers' wire:click="editUsers">Actualizar</button>
+                </x-slot>
+
+            </x-modals.user_edit>        
+
+        @endif
+
+
+
+    
+        <x-componentes.table>
+
+
 
         <x-slot:contenido>
 
@@ -109,7 +269,7 @@
                             </a>
                         </th>
 
-                        <th>Estado</th>
+                        <th>Estado de la Cuenta</th>
                         <th align="center">Acciones</th>
                     </tr>
                     </thead>
@@ -170,11 +330,11 @@
                                     @endif
 
                                 </td>
+
                                 <td align="center">
 
-                                    <button type="button" class="btn btn-primary"> <i class="fas fa-eye icon-size icon-eye"></i> </button>
-                                    <button type="button" class="btn btn-warning"> <i class="fas fa-edit icon-size"></i> </button>
-                                    <button type="button" class="btn btn-danger"> <i class="fas fa-trash icon-size"></i> </button>
+                                    <button type="button" class="btn btn-primary" wire:click.prevent="viewUserInfo({{$user->id}},'ver')"> <i class="fas fa-eye icon-size icon-eye"></i> </button>
+                                    <button type="button" class="btn btn-warning" wire:click.prevent="viewUserInfo({{$user->id}},'editar')"> <i class="fas fa-edit icon-size"></i> </button>
 
                                 </td>
                             </tr>

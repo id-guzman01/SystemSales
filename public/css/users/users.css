@@ -335,3 +335,223 @@ animation-delay: .6s;
  50% { transform:scale(0.5); }
  100% { transform:scale(1); }
 }
+
+
+
+
+
+
+
+
+
+
+/*Modal para visualizar la información del usuario*/
+.window-notice {
+  background: rgba(33, 41, 52, .85);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  color: black;
+}
+
+.window-notice .content {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 850px;
+  min-width: 320px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 120px;
+  font-size: 1.3rem;
+}
+
+
+.section-head{
+  width: 100%;
+}
+
+.section-head .row .col .section-title{
+  width: 220%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+
+
+.section-head .row .col .section-btn-close{
+  margin-left: 50%;
+  text-align: right;
+}
+
+.section-head .row .col .section-btn-close button{
+  margin-right: 13px;
+  margin-top: 10px;
+  background: #FF0303;
+  color: white;
+}
+
+.section-head .row .col .section-btn-close button:hover {
+  transition: all .1s ease;
+  background: #4E6E81;
+}
+
+.section-head .section-line-separator{
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+
+
+.section-info-user{
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.section-info-user .row .col .img-profile{
+  width: 100%;
+  height: 100%;
+}
+
+.section-info-user .row .col .img-profile img{
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: 10%;
+}
+
+.section-info-user .row .col .column-info-user{
+  width: 120%;
+  margin-left: -20%;
+  margin-top: 10%;
+}
+
+
+
+
+.data-user{
+  margin-top: -5px;
+}
+
+
+.rol-user{
+  margin-top: 15px;
+}
+
+.status-user{
+  margin-top: -5px;
+  width: 130px;
+  height: 30px;
+  background: #2E3840;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.status-user p{
+  font-size: 15px;
+  padding-top: 2.5px;
+}
+
+
+
+
+
+/*Modal para editar a un usuario en especifico*/
+.window-notice-edit {
+  background: rgba(33, 41, 52, .85);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  color: black;
+}
+
+.window-notice-edit .content-edit {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 500px;
+  min-width: 320px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 120px;
+  font-size: 1.3rem;
+}
+
+.section-content-edit-user{
+  width: 90%;
+  margin-left: 5%;
+}
+
+.section-content-state{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.form-label{
+  font-size: 18px;
+}
+
+.section-content-edit-user select{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 35px;
+  font-size: 15px;
+}
+
+
+
+
+
+.section-content-role-acount{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.section-content-btn-update-acount{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-content-btn-update-acount button{
+  width: 40%;
+  border-radius: 10px;
+  background: #FF0303;
+  border: none;
+}
+
+.section-content-btn-update-acount button:hover {
+  transition: all .1s ease;
+  background: #4E6E81;
+}
+
+
+
+
+
+
+
+
+.message-error{
+  color: red;
+}

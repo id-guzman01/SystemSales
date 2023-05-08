@@ -27,7 +27,16 @@ Route::get('/login',function(){
 
     if (Auth::check()) {
 
+
+        foreach(auth()->user()->roles as $item){
+            $rol_user =  $item->name;
+        }
+
+        if($rol_user == 'Administrador'){
             return redirect('admin/dashboard');
+        }else{
+
+        }
 
 
     }else{
@@ -83,6 +92,15 @@ Route::middleware('auth')->prefix('admin')->group(function(){
         return view('interface.users.create_users');
     })->name('create_users');
 
+    Route::get('/productos',function(){
+        return view('interface.products.productos');
+    })->name('productos');
+
+    Route::get('/create_productos',function(){
+        return view('interface.products.create_productos');
+    })->name('create_products');
+
+
 });
 
 Route::get('/name-user',function(){
@@ -96,4 +114,8 @@ Route::middleware('auth')->prefix('client')->group(function(){
 });
 
 
+
+Route::get('/st',function(){
+    return view('mails.solicitar_stock');
+});
 

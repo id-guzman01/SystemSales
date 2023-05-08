@@ -14,15 +14,13 @@ return new class extends Migration
         Schema::table('products', function (Blueprint $table) {
             
             $table->after('discount_id',function($table){
-
-                $table->unsignedBigInteger('state_id')->nullable();
-                $table->foreign('state_id')
+                
+                $table->unsignedBigInteger('taxe_id')->nullable();
+                $table->foreign('taxe_id')
                         ->references('id')
-                        ->on('states')
+                        ->on('taxes')
                         ->onDelete('cascade')
                         ->onUpdate('cascade');
-
-                $table->bigInteger('precio');
 
             });
 
